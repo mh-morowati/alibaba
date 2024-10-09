@@ -1,7 +1,8 @@
 import { OverridableComponent } from "@mui/material/OverridableComponent";
 import { SvgIconTypeMap } from "@mui/material/SvgIcon/SvgIcon";
 import Link from "next/link";
-
+{/*in this section i don't no the type of icon and i so confused but when i hover on the "icon" attribute in the
+     father component i fix this problem so esily*/}
 
 interface LinkProps {
     linkHref: string;
