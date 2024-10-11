@@ -1,19 +1,26 @@
 'use client';
 
+import Link from "next/link";
 
-interface Menues{
-  menuList: string[];
+interface obj {
+  name: string;
+  link: string;
 }
-function OnClick(props:Menues) {
+interface Menues {
+  menuList: obj[];
+}
+function OnClick(props: Menues) {
 
   return (
-        <ul>
-          {props.menuList.map((menu) => (
-            <li key={menu} className="py-2 px-4 hover:bg-gray-200">
-              {menu}
-            </li>
-          ))}
-        </ul>
-      )}
+    <ul>
+      {props.menuList.map((menu) => (
+
+        <li key={menu.name} className="py-2 px-4 hover:bg-gray-200">
+          <Link href={menu.link}>{menu.name}</Link>
+        </li>
+      ))}
+    </ul>
+  )
+}
 
 export default OnClick;

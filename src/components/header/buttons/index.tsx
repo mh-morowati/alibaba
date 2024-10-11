@@ -2,6 +2,7 @@
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import OnClick from '../../onclick/index';
 import { useState } from "react";
+import Link from 'next/link';
 
 
 function ButtonsOnclick() {
@@ -24,23 +25,29 @@ function ButtonsOnclick() {
         setShowMenuTicket(false);
         setShowMenuStay(false);
     };
-    const closeCityList = () => {
-        setShowCityList(false)
+    const closeMenuList = () => {
+        setShowMenuTicket(false);
+        setShowMenuStay(false);
+        setShowMenuMore(false);
     }
     return (<>
         <button className="py-[1px] px-6 border-l" onClick={handleClickTicket}>بلیط <ExpandMoreIcon /></button>
-        {showMenuTicket && <div className="absolute z-[1000000] bg-white border border-gray-300 rounded-md mt-12">
-            <OnClick menuList={['پروازداخلی',"پروازخارجی","قطار",'اتوبوس']} />
+        {showMenuTicket && <div className="absolute z-[1000000] bg-white border border-gray-300 rounded-md mt-12" onClick={closeMenuList}>
+            <OnClick menuList={[{ name: 'پروازداخلی', link: '/' }, { name: "پروازخارجی", link: '/iranout' }, { name: "قطار", link: '/train-ticket' }, { name: 'اتوبوس', link: '/bus-ticket' }]} />
         </div>}
         <button className="py-[1px] px-6 border-l" onClick={handleClickStay}>اقامت <ExpandMoreIcon /></button>
-        {showMenuStay && <div className="absolute z-[1000000] bg-white border border-gray-300 rounded-md mt-12 right-[430px]">
-            <OnClick menuList={['هتل','ویلا']} />
+        {showMenuStay && <div className="absolute z-[1000000] bg-white border border-gray-300 rounded-md mt-12 right-[430px]" onClick={closeMenuList}>
+            <OnClick menuList={[{ name: 'هتل', link: '/hotel' }, { name: 'ویلا', link: '/accommodation' }]} />
         </div>}
-        <button className="py-[1px] px-6 border-l">تور</button>
-        <button className="py-[1px] px-6 border-l">ویزا</button>
+        <Link href={'/tour'}>
+            <button className="py-3 px-6 border-l">تور</button>
+        </Link>
+        <Link href={'/visa'}>
+            <button className="py-3 px-6 border-l">ویزا</button>
+        </Link>
         <button className="py-[1px] px-6" onClick={handleClickMore}>بیشتر <ExpandMoreIcon /></button>
-        {showMenuMore && <div className="absolute z-[1000000] bg-white border border-gray-300 rounded-md mt-12 right-[670px]">
-            <OnClick menuList={['علی باباپلاس','مجله علی بابا','بیمه مسافرتی']} />
+        {showMenuMore && <div className="absolute z-[1000000] bg-white border border-gray-300 rounded-md mt-12 right-[670px]" onClick={closeMenuList}>
+            <OnClick menuList={[{ name: 'علی باباپلاس', link: '' }, { name: 'مجله علی بابا', link: '' }, { name: 'بیمه مسافرتی', link: '' }]} />
         </div>}
 
     </>);
