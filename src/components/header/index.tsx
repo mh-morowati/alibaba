@@ -2,8 +2,8 @@ import Image from "next/image";
 import Link from "next/link";
 import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
 import LuggageIcon from '@mui/icons-material/Luggage';
-import PersonOutlineIcon from '@mui/icons-material/PersonOutline';
 import ButtonsOnclick from './buttons/index';
+import Login from '../login/index';
 
 
 function Header() {
@@ -19,7 +19,7 @@ function Header() {
             <div className="basis-2/6 flex">
                 <p className="py-[10px]"><HelpOutlineIcon/>مرکز پشتیبانی آنلاین</p>
                 <p className="py-[10px] mr-7"><LuggageIcon/>سفرهای من</p>
-                <button className="py-[1px] px-6"><PersonOutlineIcon/><span>ورود یا ثبت‌نام</span></button>
+                <Login/>
 
             </div>
         </nav>
