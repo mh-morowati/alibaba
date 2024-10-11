@@ -7,7 +7,6 @@ import DirectionsBusIcon from '@mui/icons-material/DirectionsBus';
 import HikingIcon from '@mui/icons-material/Hiking';
 import ApartmentIcon from '@mui/icons-material/Apartment';
 import HouseIcon from '@mui/icons-material/House';
-import SearchForPass from '../search/index';
 
 interface ImgProps {
     imgSrc: string;
@@ -26,7 +25,6 @@ function ImgPage(props: ImgProps) {
             <LinkMenu linkHref={'/hotel'} linkName={'هتل'} icon={ApartmentIcon}/>
             <LinkMenu linkHref={'/accommodation'} linkName={'ویلاواقامتگاه'} icon={HouseIcon}/>
         </nav>
-        <SearchForPass/>
     </div>);
 }
 
