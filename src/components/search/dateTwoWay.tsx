@@ -18,7 +18,7 @@ function DateSearch() {
 
     return (<>
         <button className="absolute md:bottom-[330px] text-zinc-700 border rounded-lg p-1 px-2 border-zinc-400 md:right-64
-        max-md:top-14 focus:text-blue-500 focus:underline underline-offset-4 max-md:w-[98%] max-md:right-1"
+        max-md:top-14 focus:text-blue-500 max-md:w-[98%] max-md:right-1"
             onClick={onclick}>
             {buttonName}
         </button>

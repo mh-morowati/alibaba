@@ -15,7 +15,7 @@ function BusTicketSearch() {
         <input type="date" name="dateBus" id="dateBus" className="border w-80 p-3 border-zinc-300 rounded-lg md:ml-2
         max-md:w-[94%] max-md:my-5" />
         <button className="border p-3 border-zinc-300 rounded-lg bg-yellow-500 px-[70px] hover:bg-yellow-600
-        max-md:w-[94%]">جستجو</button>
+        max-md:w-[94%]">جستجوی اتوبوس</button>
     </div>);
 }
 

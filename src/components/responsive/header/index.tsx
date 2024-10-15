@@ -52,7 +52,7 @@ function ResponsiveHeader() {
                     <p><small>اعلان ها</small></p></Link>
             </div>
             <div className='basis-1/5'>
-                <Link href={''}>
+                <Link href={'/login'}>
                     <AccountCircleIcon className='h-7 w-6' />
                     <p><small>حساب کاربری</small></p></Link>
             </div>
