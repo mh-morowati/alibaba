@@ -14,7 +14,7 @@ interface ImgProps {
 }
 
 function ImgPage(props: ImgProps) {
-    return (<div>
+    return (<div className='max-md:hidden'>
         <Image className='mx-auto' src={props.imgSrc} alt={props.imgAlt} width={1390} height={150} />
         <nav className='relative mx-auto bottom-[80px] flex bg-white w-[70%] h-20 z-50 py-4 px-14'>
             <LinkMenu linkHref={'/'} linkName={'پروازداخلی'} icon={AirplanemodeActiveIcon}/>

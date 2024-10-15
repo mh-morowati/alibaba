@@ -1,6 +1,6 @@
 import LinkMenu from '@/components/page-img/link-menu';
 import Image from 'next/image';
-import LanguageIcon from '@mui/icons-material/Language';
+import AirplanemodeActiveIcon from '@mui/icons-material/AirplanemodeActive';
 import SubwayIcon from '@mui/icons-material/Subway';
 import DirectionsBusIcon from '@mui/icons-material/DirectionsBus';
 import HikingIcon from '@mui/icons-material/Hiking';
@@ -21,7 +21,7 @@ function ResponsiveHeader() {
         <div className='w-[90%] h-48 border rounded-lg bg-white z-5555 mx-auto'>
 
             <div className='inline-block w-[150px] max-[320px]:w-32'>
-                <div className='border border-zinc-300 rounded-tr-md p-1'><LinkMenu linkHref={'/domestic'} linkName={'پرواز'} icon={LanguageIcon} /></div>
+                <div className='border border-zinc-300 rounded-tr-md p-1'><LinkMenu linkHref={'/domestic'} linkName={'پرواز'} icon={AirplanemodeActiveIcon} /></div>
                 <div className='border border-zinc-300 p-1'><LinkMenu linkHref={'/bus-ticket'} linkName={'اتوبوس'} icon={DirectionsBusIcon} /></div>
                 <div className='border border-zinc-300 rounded-br-md p-1'><LinkMenu linkHref={'/tour'} linkName={'تور'} icon={HikingIcon} /></div>
             </div>
