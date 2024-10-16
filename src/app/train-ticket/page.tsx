@@ -1,5 +1,5 @@
 import ImgPage from '@/components/page-img/index';
-import SearchForPass from '@/components/search/index';
+import TrainTicket from '@/components/search/train/index';
 
 export default function Train() {
   return (
@@ -8,7 +8,7 @@ export default function Train() {
 
     </div>
     <ImgPage imgSrc={'/img/train.webp'} imgAlt={'train ticket'}/>
-    <SearchForPass/>
+    <TrainTicket/>
    </div>
   );
 }

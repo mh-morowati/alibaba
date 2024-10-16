@@ -1,6 +1,6 @@
 import ImgPage from '@/components/page-img/index';
-import SearchForPass from '@/components/search/index';
-import ResponsiveHeader from '../components/responsive/header/index';
+import ResponsiveHeader from '@/components/responsive/header/index';
+import AirPlaneTicket from '@/components/search/plane-in/index';
 
 export default function Home() {
   return (
@@ -10,7 +10,7 @@ export default function Home() {
     </div>
     <div className='max-md:hidden'>
     <ImgPage imgSrc={'/img/air-countries.webp'} imgAlt={'airPlane in iran'}/>
-    <SearchForPass/>
+    <AirPlaneTicket/>
    </div>
    </>
   );

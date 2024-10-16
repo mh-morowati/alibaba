@@ -1,6 +1,6 @@
 import ImgPage from '@/components/page-img/index';
-import SearchForPass from '@/components/search/index';
 import Link from "next/link";
+import AirPlaneForeignTicket from '@/components/search/plane-out/index';
 
 
 export default function IranOut() {
@@ -15,7 +15,7 @@ export default function IranOut() {
         </Link>
     </div>
     <ImgPage imgSrc={'/img/air-foreing.webp'} imgAlt={'airPlane foreing'}/>
-    <SearchForPass/>
+    <AirPlaneForeignTicket/>
    </div>
   );
 }
