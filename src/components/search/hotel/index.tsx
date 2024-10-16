@@ -9,10 +9,10 @@ function HotelSearch({roomlist}: SearchForPassProps) {
     const [destination, setDestination] = useState('');
     const [rooms, setRooms] = useState<HotelTicket[]>([]);
 
-    const handleSearch = async () => {
+    const handleSearch =  () => {
         // Filter the ticketList based on user inputs for origin, destination, and date
         const filteredTickets = roomlist.filter(room =>
-            room.destination.toLowerCase() === destination.toLowerCase()
+            room.destination === destination
         );
     
         // Set the filtered tickets in state to display the results
@@ -43,7 +43,7 @@ function HotelSearch({roomlist}: SearchForPassProps) {
           <ul>
             {rooms.map(room => (
               <li key={room.id}>
-                 {room.destination} - {room.price} تومان {room.name}
+                 {room.destination} - {room.price} تومان {room.name} -
               </li>
             ))}
           </ul>

@@ -1,11 +1,11 @@
 import ImgPage from '@/components/page-img/index';
-import AccommodationTickets from '@/components/search/hotel/AccommodationTickets';
+import HotelTickets from '@/components/search/hotel/HotelTickets';
 
 export default function Hotel() {
   return (
    <div>
     <ImgPage imgSrc={'/img/hotel.webp'} imgAlt={'hotel'}/>
-    <AccommodationTickets/>
+    <HotelTickets/>
    </div>
   );
 }

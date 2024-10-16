@@ -17,11 +17,11 @@ function BusTicketSearch() {
   const [date, setDate] = useState('');
   const [tickets, setTickets] = useState<Ticket[]>([]); // Use Ticket[] to define an array of Ticket
 
-  const handleSearch = async () => {
+  const handleSearch =  () => {
     // Filter the ticketList based on user inputs for origin, destination, and date
     const filteredTickets = ticketList.filter(ticket =>
-      ticket.origin.toLowerCase() === origin.toLowerCase() &&
-      ticket.destination.toLowerCase() === destination.toLowerCase()
+      ticket.origin === origin &&
+      ticket.destination === destination
     );
 
     // Set the filtered tickets in state to display the results
