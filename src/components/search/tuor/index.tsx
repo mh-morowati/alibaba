@@ -1,5 +1,6 @@
 'use client';
 import { useState } from 'react';
+import Image from 'next/image';
 
 interface Tours{
     id: number;
@@ -65,8 +66,10 @@ function TourSearch() {
         {tours.length > 0 ? (
           <ul>
             {tours.map(tour => (
-              <li key={tour.id}>
-                 {tour.destination} - {tour.price} تومان {tour.name} 
+              <li key={tour.id} className='w-[450px] mx-auto h-[180px] border border-zinc-400 p-2 max-md:w-[100%]'>
+                {tour.price} تومان {tour.name} <Image className='inline-block mt-2' src={tour.imgSrc} alt={tour.name} width={170} height={150}/>
+               <button className='bg-blue-600
+                p-2 rounded-md text-white hover:bg-blue-700 mr-2'>انتخاب</button>
               </li>
             ))}
           </ul>

@@ -1,6 +1,7 @@
 'use client';
 import { useState } from 'react';
 import { HotelTicket } from '../HotelTicket';
+import Image from 'next/image';
 
 interface SearchForPassProps {
     roomlist: HotelTicket[];
@@ -42,8 +43,10 @@ function HotelSearch({roomlist}: SearchForPassProps) {
         {rooms.length > 0 ? (
           <ul>
             {rooms.map(room => (
-              <li key={room.id}>
-                 {room.destination} - {room.price} تومان {room.name} -
+              <li key={room.id} className='w-[450px] mx-auto h-[180px] border border-zinc-400 p-2 max-md:w-[100%]'>
+                   {room.price} تومان {room.name}  <Image className='inline-block mt-2' src={room.imgSrc} alt={room.name} width={170} height={150}/>
+                  <button className='bg-blue-600 mr-2
+                p-2 rounded-md text-white hover:bg-blue-700'>انتخاب</button>
               </li>
             ))}
           </ul>

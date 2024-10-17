@@ -17,7 +17,7 @@ function BusTicketSearch() {
   const [date, setDate] = useState('');
   const [tickets, setTickets] = useState<Ticket[]>([]); // Use Ticket[] to define an array of Ticket
 
-  const handleSearch =  () => {
+  const handleSearch = () => {
     // Filter the ticketList based on user inputs for origin, destination, and date
     const filteredTickets = ticketList.filter(ticket =>
       ticket.origin === origin &&
@@ -27,6 +27,10 @@ function BusTicketSearch() {
     // Set the filtered tickets in state to display the results
     setTickets(filteredTickets);
   };
+  const onclick = () =>{
+    setDestination(origin);
+    setOrigin(destination);
+  }
 
   return (
     <div className="w-[83%] mx-auto text-center max-md:w-[100%]">
@@ -37,8 +41,9 @@ function BusTicketSearch() {
         value={origin}
         onChange={(e) => setOrigin(e.target.value)}
       />
-      <button className="p-1 px-[6px] bg-white rounded-full border border-zinc-300 absolute md:right-[453px] md:bottom-[244px] text-zinc-600 max-md:right-32 max-md:top-[70px]">
-        <SyncAltIcon className="w-5 h-5" />
+      <button className="p-1 px-[6px] bg-white rounded-full border border-zinc-300 absolute md:right-[453px] md:bottom-[244px]
+       text-zinc-600 max-md:right-32 max-md:top-[70px]" onClick={onclick}>
+        <SyncAltIcon className="w-5 h-5"  />
       </button>
       <input
         type="search"
@@ -73,9 +78,9 @@ function BusTicketSearch() {
         {tickets.length > 0 ? (
           <ul>
             {tickets.map(ticket => (
-              <li key={ticket.id}>
-                {ticket.origin} to {ticket.destination} on {ticket.date} - {ticket.price} تومان
-              </li>
+              <li key={ticket.id} className='border border-zinc-300 w-[480px] mx-auto p-2 py-4'>
+                {ticket.origin}  ___________________  {ticket.destination} &nbsp;&nbsp; {ticket.price} تومان <button className='bg-blue-600
+                p-2 rounded-md text-white hover:bg-blue-700'>انتخاب</button></li>
             ))}
           </ul>
         ) : (
